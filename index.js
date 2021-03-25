@@ -1,5 +1,5 @@
 "use strict";
-reverseString();
+
 //problem 1: 
 function reverseString() {
     let str = document.getElementById("input").value;
@@ -15,4 +15,22 @@ function capitalizeFirst(){
     document.getElementById("product").innerHTML = words.map((word) => {
         return word[0].toUpperCase() + word.substring(1);
     }).join(" ");
+}
+//problem 3:
+function compressCharacters(){
+    let chars = document.getElementById("thingToCompress").value.split("");
+    let res = "";
+    for(let i = 0; i < chars.length; i++)
+    {
+        let count = 1;
+        let char = chars[i];
+        while(i < chars.length - 1 && chars[i] == chars[i + 1])
+        {
+            count++;
+            i++;
+        }
+        res += char + count;
+        
+    }
+    document.getElementById("compressed").innerHTML = res;
 }
