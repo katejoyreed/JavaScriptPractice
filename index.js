@@ -34,3 +34,16 @@ function compressCharacters(){
     }
     document.getElementById("compressed").innerHTML = res;
 }
+
+function palindromeCheck(){
+    let lowerCase = document.getElementById("thingToCheck").value.toLowerCase();
+    let reverse = lowerCase.split("").reverse().join("");
+    if(reverse == lowerCase)
+    {
+        document.getElementById("answer").innerHTML = "True";
+    }
+    else
+    {
+        document.getElementById("answer").innerHTML = "False";
+    }
+}
